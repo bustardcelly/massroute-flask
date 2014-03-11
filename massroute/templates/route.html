@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}massroute route {{ route.route.title }}{% endblock %}
+{% block content %}
+{% for key in route.destinations %}
+<div>
+  <p>{{ key }}</p>
+  <ul>
+  {% for item in route.destinations[key] %}
+    <li data-destinationtag="{{ item.tag }}"><a href="/routes/{{ route.route.tag }}/destinations/{{ item.tag }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
+{% endfor %}
+{% endblock %}

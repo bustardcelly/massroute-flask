@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}massroute routes{% endblock %}
+{% block content %}
+<ul>
+{% for route in routes %}
+  <li data-routetag="{{ route.tag }}"><a href="/routes/{{ route.tag }}">{{ route.title }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>massroute {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='massroute.css') }}" >
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1>massroute</h1>
+      </hgroup>
+    </header>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer>
+      made possible by MassDOT
+    </footer>
+  </body>
+</html>
