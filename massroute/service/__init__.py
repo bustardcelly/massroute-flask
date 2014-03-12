@@ -1,5 +1,6 @@
 from massroute.service.route import Routes, Route
 from massroute.service.destination import Destination
+from massroute.service.prediction import Prediction
 
 #: An instance of the :class:`Routes` class
 routes = Routes()
@@ -9,3 +10,6 @@ route = Route()
 
 #: An instance of the :class:`Destination` class
 destination = Destination()
+
+#: An instance of the :class:`Prediction` class
+prediction = Prediction()

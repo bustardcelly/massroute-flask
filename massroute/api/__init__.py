@@ -4,6 +4,7 @@ from flask import Blueprint
 
 from massroute.service import routes, route
 from massroute.service import destination
+from massroute.service import prediction
 
 api = Blueprint('api', __name__)
 
@@ -35,8 +36,18 @@ def get_destination(routeid, destinationid):
   except:
     traceback.print_exc()
     return 'Could not load Destination data with id %s.' % destinationid
-  print "%r" % str(payload)
   return render_template('destination.html', destination=payload)
+
+@api.route('/routes/<routeid>/destinations/<destinationid>/stops/<stopid>')
+def get_predictions(routeid, destinationid, stopid):
+  payload = {}
+  try:
+    payload = prediction.get(routeid, destinationid, stopid)
+  except:
+    traceback.print_exc()
+    return 'Could not load Predictions.'
+  print "%r" % str(payload)
+  return render_template('predictions.html', predictions=payload)
 
 @api.errorhandler(404)
 def not_found(error):
