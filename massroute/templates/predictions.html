@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 {% block title %}massroute route {{ predictions.routeTitle }} - {{ predictions.stopTitle }}{% endblock %}
+{% block header %}
+<header id="header">
+  <h1>Predictions for <a class="header-link" href="{{ format_prediction_breadcrumb(predictions) }}">{{ predictions.stopTitle }}</a></h1>
+  <h1>along <a class="header-link" href="/">Route {{ predictions.routeTitle }}</a></h1>
+</header>
+{% endblock %}
 {% block content %}
 <div>
   <p>{{ predictions.routeTitle }} - {{ predictions.stopTitle }}</p>

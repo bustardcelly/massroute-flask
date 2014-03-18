@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 {% block title %}massroute route {{ route.route.title }}{% endblock %}
+{% block header %}
+<header id="header">
+  <h1>Destinations</h1>
+  <h1>along <a class="header-link" href="/">Route {{ route.route.title }}</a></h1>
+  <h2>Select a destination to see stops available</h2>
+</header>
+{% endblock %}
 {% block content %}
 {% for key in route.destinations %}
 <div>

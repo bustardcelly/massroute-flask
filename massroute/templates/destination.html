@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 {% block title %}massroute route {{ destination.route.title }} - {{ destination.destination.title }}{% endblock %}
+{% block header %}
+<header id="header">
+  <h1>Stops for <a class="header-link" href="/routes/{{ destination.route.tag }}">{{ destination.destination.title }}</a></h1>
+  <h1>along <a class="header-link" href="/">Route {{ destination.route.title }}</a></h1>
+  <h2>Select a stop to see next arrival times</h2>
+</header>
+{% endblock %}
 {% block content %}
 <div>
   <p>{{ destination.destination.title }}</p>

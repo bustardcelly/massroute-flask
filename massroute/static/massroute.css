@@ -1,9 +1,105 @@
 body {
-  font-size: 14px;
+  font: 100%/1.5 sans-serif;
+}
+
+header {
+  display: block;
+  padding: 1em 0 0 0;
+  background-color: #ffffff;
+  background-image: url('./assets/graphics/logo.png');
+  background-position: -18px -18px;
+  background-repeat: no-repeat;
 }
 
 footer {
-  padding: 1rem;
+  padding: 0.5em;
   background-color: #ddd;
   text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  padding: 0 0.5em 0 0.5em;
+  text-align: right;
+}
+
+header h2 {
+  font-size: 1em;
+  padding: 0 0.5em .5em .5em;
+  text-align: right;
+}
+
+.attribution {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.header-link {
+  color: #2F5DA6;
+}
+
+.title {
+  color: #2F5DA6;
+}
+
+.credit-link {
+  color: #2F5DA6;
+}
+
+.destination-title {
+  font-size: 1.5em;
+  color: #ffffff;
+  background-color: #7691cd;
+  padding: 0.3em;
+}
+
+.list {
+  list-style: none;
+}
+
+.routelist-item {
+  border-top-color: #556ca2;
+  border-top-style: solid;
+  border-top-width: 0.1em;
+  border-bottom-color: #556ca2;
+  border-bottom-style: solid;
+  border-bottom-width: 0.1em;
+  background-color: #CDD5EA;
+  color: #2A2A2A;
+  min-height: 1em;
+  margin-top: -0.1em;
+  font-size: 1.5em;
+  padding: 1.5em 1.5em 1em 1em;
+  cursor: pointer;
+}
+
+.routelist-item a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2A2A2A;
+  position: relative;
+  top: -0.3em;
+  left: 0.5em;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.loading-modal {
+  position: absolute;
+  width: 180px;
+  padding: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: middle;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7c9bc0), color-stop(2%, #416086), color-stop(100%, #293e56));
+  -webkit-border-radius: 6px;
+  -webkit-box-shadow: -1px 2px 12px rgba(0, 0, 0, 0.75);
 }
