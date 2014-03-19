@@ -8,14 +8,14 @@
 {% endblock %}
 {% block content %}
 <div>
-  <p>{{ predictions.routeTitle }} - {{ predictions.stopTitle }}</p>
+  <p class="destination-title">{{ predictions.routeTitle }} - {{ predictions.stopTitle }}</p>
   <ul>
   {% if predictions_list(predictions.predictions) %}
     {% for time in predictions.predictions %}
-    <li>{{ format_prediction(time.minutes, time.seconds) }}</li>
+    <li class="routelist-item">{{ format_prediction(time.minutes, time.seconds) }}</li>
     {% endfor %}
   {% else %}
-    <li>{{ format_prediction(predictions.predictions.minutes, predictions.predictions.seconds) }}</li>
+    <li class="routelist-item">{{ format_prediction(predictions.predictions.minutes, predictions.predictions.seconds) }}</li>
   </ul>
   {% endif %}
 </div>

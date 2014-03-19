@@ -9,10 +9,10 @@
 {% endblock %}
 {% block content %}
 <div>
-  <p>{{ destination.destination.title }}</p>
+  <p class="destination-title">{{ destination.destination.title }}</p>
   <ul>
   {% for stop in destination.stops %}
-    <li data-stoptag="{{ stop.tag }}"><a href="/routes/{{ destination.route.tag }}/destinations/{{ destination.destination.tag }}/stops/{{ stop.tag }}">{{ stop.title }}</a></li>
+    <li class="routelist-item" data-stoptag="{{ stop.tag }}"><a href="/routes/{{ destination.route.tag }}/destinations/{{ destination.destination.tag }}/stops/{{ stop.tag }}">{{ stop.title }}</a></li>
   {% endfor %}
   </ul>
 </div>

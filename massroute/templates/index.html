@@ -9,7 +9,10 @@
 {% block content %}
 <ul>
 {% for route in routes %}
-  <li data-routetag="{{ route.tag }}"><a href="/routes/{{ route.tag }}">{{ route.title }}</a></li>
+  <li class="routelist-item" data-routetag="{{ route.tag }}">
+    <img src="{{ url_for('static', filename='assets/graphics/bus_icon.png') }}" />
+    <a href="/routes/{{ route.tag }}">{{ route.title }}</a>
+  </li>
 {% endfor %}
 </ul>
 {% endblock %}

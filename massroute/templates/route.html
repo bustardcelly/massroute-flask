@@ -10,10 +10,10 @@
 {% block content %}
 {% for key in route.destinations %}
 <div>
-  <p>{{ key }}</p>
+  <p class="destination-title">{{ key }}</p>
   <ul>
   {% for item in route.destinations[key] %}
-    <li data-destinationtag="{{ item.tag }}"><a href="/routes/{{ route.route.tag }}/destinations/{{ item.tag }}">{{ item.title }}</a></li>
+    <li class="routelist-item" data-destinationtag="{{ item.tag }}"><a href="/routes/{{ route.route.tag }}/destinations/{{ item.tag }}">{{ item.title }}</a></li>
   {% endfor %}
   </ul>
 </div>
